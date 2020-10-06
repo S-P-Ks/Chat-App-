@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,user-scalable = no"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Chat App</title>
+  </head>
+  <body>
+    <div class="body">
+      <div class="navbar">
+        <div>People</div>
+        <div class="members"></div>
+      </div>
+      <div class="chat-box">
+        <div class="chat">
+          <div class="chat-heading">Chat App</div>
+          <div class="chat-body"></div>
+        </div>
+
+        <form id="message-form">
+          <input type="text" id="input" name="message" placeholder="message" />
+          <button type="submit" id="submit-btn">Submit</button>
+          <button type="button" id="send-location">Send Location</button>
+        </form>
+      </div>
+    </div>
+
+    <script id="message-template" type="text/template">
+      <li class="message">
+        <div class="message__title">
+          <h5 class="message__heading"> {{from}} :   </h5><span class="time">  {{createdAt}} </span>
+        </div>
+        <div class="message__body">
+          <div> {{text}} </div>
+        </div>
+      </li>
+    </script>
+
+    <script id="loation-message-template" type="text/template">
+      <li class="message">
+        <div class="message__title">
+          <h5 class="message__heading"> {{from}} :   </h5><span class="time">  {{createdAt}} </span>
+        </div>
+        <div class="message__body">
+          <a href="{{url}}" target="_blank">My Location</a>
+        </div>
+      </li>
+    </script>
+
+    <script src="/socket.io/socket.io.js"></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.0/moment.min.js"
+      integrity="sha512-Izh34nqeeR7/nwthfeE0SI3c8uhFSnqxV0sI9TvTcXiFJkMd6fB644O64BRq2P/LA/+7eRvCw4GmLsXksyTHBg=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./js//mustache.js"></script>
+    <script type="text/javascript" src="./js/index.js"></script>
+  </body>
+</html>

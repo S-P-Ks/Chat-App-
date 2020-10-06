@@ -2,13 +2,29 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Chat App</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0,user-scalable = no"
+    />
+    <title>Login Chat</title>
+    <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body>
-    <p>Welcome to the Chat App</p>
-
-    <script src="/socket.io/socket.io.js"></script>
-    <script type="text/javascript" src="./js/index.js"></script>
+  <body class="centered-form">
+    <div class="centered-form__form">
+      <form action="chat.html">
+        <div class="form-feild"><h3>Join Chat</h3></div>
+        <div class="form-feild">
+          <label class="label"> Display Name </label>
+          <input type="text" name="name" autofocus />
+        </div>
+        <div class="form-feild">
+          <label class="label"> Room Name </label>
+          <input type="text" name="room" autofocus />
+        </div>
+        <div class="form-feild">
+          <button>Join</button>
+        </div>
+      </form>
+    </div>
   </body>
 </html>
