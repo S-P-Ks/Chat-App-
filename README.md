@@ -10,7 +10,7 @@ Here we are using the Socket.io library
 Emit method e.g :-- 
 -----> It takes event to be emitted and parameters,callback(optional) to be passed .
 io.emit("newMessage",{
-  ## takes the parameters to be passed .
+   .......takes the parameters to be passed .
 }) :
 
 On method e.g :--
